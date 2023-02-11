@@ -1,9 +1,8 @@
 import { Age } from './../src/age.js';
 
 describe('Age', () => {
-  let solarPlanet, userAge, pastBirthday, years, futBirth;
-  let earth, mercury, venus, mars, jupiter;
-
+  let userAge, pastBirthday, years, futBirth;
+  
   beforeEach(() => {
     userAge = new Age();
     userAge.userDateOfBirth = new Date('January 01, 1967');
