@@ -41,10 +41,13 @@ export class Age {
     let days = Math.floor(diff / day);
     let months = Math.floor(days / 31);
     let years = Math.ceil(months / 12);
-
     for (let element in this.allThePlanets) {
       if (element === planet) {
-        return years / this.allThePlanets[element];
+        let result = years / this.allThePlanets[element];
+        if (result % 1 != 0) {
+          result = result.toFixed(2);
+        }
+        return Number(result);
       }
     }
   }
@@ -59,7 +62,7 @@ export class Age {
         if (result % 1 != 0) {
           result = result.toFixed(2);
         }
-        return result;
+        return Number(result);
 
       }
     }
@@ -73,8 +76,11 @@ export class Age {
 
     for (let element in this.allThePlanets) {
       if (element === planet) {
-        return _userAge / this.allThePlanets[element];
-
+        let result = _userAge / this.allThePlanets[element];
+        if (result % 1 != 0) {
+          result = result.toFixed(2);
+        }
+        return Number(result);
       }
     }
   }
