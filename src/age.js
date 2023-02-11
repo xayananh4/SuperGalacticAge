@@ -25,10 +25,6 @@ export class Age {
     return userAge;
   }
 
-  getSolarPlant() {
-    return new Array("earth", "mercury", "venus", "mars", "jupiter");
-  }
-
   convertAgeToDays(userDateOfBirth) {
     let numberOfDays = this.getUserAgeInYears(userDateOfBirth) * 365;
     return numberOfDays;
