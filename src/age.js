@@ -54,7 +54,13 @@ export class Age {
     let _userAge = this.getUserAgeInYears();
     for (let element in this.allThePlanets) {
       if (element === planet) {
-        return _userAge / this.allThePlanets[element];
+
+        let result = _userAge / this.allThePlanets[element];
+        if (result % 1 != 0) {
+          result = result.toFixed(2);
+        }
+        return result;
+
       }
     }
   }
@@ -64,11 +70,11 @@ export class Age {
     let userCurrentAge = this.getUserAgeInYears(userDob);
     let futureBirthdayAge = futureDate.getFullYear() - userDob.getFullYear();
     _userAge = futureBirthdayAge - userCurrentAge;
-    
+
     for (let element in this.allThePlanets) {
       if (element === planet) {
         return _userAge / this.allThePlanets[element];
-        
+
       }
     }
   }

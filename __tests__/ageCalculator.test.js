@@ -70,6 +70,7 @@ describe('Age', () => {
     venusYears = userAge.calculatorAgeInSolarYears(venus);
     marsYears = userAge.calculatorAgeInSolarYears(mars);
     jupiterYears = userAge.calculatorAgeInSolarYears(jupiter);
+    expect(earthYears).toEqual(56);
     console.log(earthYears + " in " + earth + " years ");
     console.log(mercuryYears + " in " + mercury + " years ");
     console.log(venusYears + " in " + venus + " years ");
@@ -118,4 +119,7 @@ describe('Age', () => {
     console.log(marsYearsResults + " " + mars+ " years have yet to pass.");
     console.log(jupiterYearsResults + " " + jupiter + " years have yet to pass.");
   });
+
+
+
 });
